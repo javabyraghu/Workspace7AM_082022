@@ -1,0 +1,9 @@
+#This is sample properties file
+#my.db.driver=OracleDriver
+my.db.driver=MySQLDriver
+my.db-url=jdbc:oracle:thin:sample
+my.db_user=abcd
+my.db-pwd=raghu
+# keys are case-sensitive
+my.db-Pwd=sample
+my.grade.id=240S

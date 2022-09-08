@@ -1,0 +1,7 @@
+package com.app;
+
+public class EmailConfig {
+
+	private String host;
+	private Integer port;
+}

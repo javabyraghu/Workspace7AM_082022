@@ -1,0 +1,11 @@
+package com.app.repo;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
+public class MyRepository {
+	
+	@Value("SAMPLE")
+	private String entity;
+}

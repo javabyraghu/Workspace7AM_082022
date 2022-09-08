@@ -1,0 +1,12 @@
+package com.app.raghu;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+//@ComponentScan("com.app.raghu")
+@Configuration
+public class AppConfig {
+
+	//1. Bean = 1 Method
+	
+}

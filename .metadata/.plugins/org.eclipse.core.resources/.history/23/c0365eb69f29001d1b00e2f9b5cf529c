@@ -1,0 +1,13 @@
+package my.one.format;
+
+public class ViewResolver {
+
+	private String prefix;
+	private String suffix;
+	@Override
+	public String toString() {
+		return "ViewResolver [prefix=" + prefix + ", suffix=" + suffix + "]";
+	}
+	
+	
+}

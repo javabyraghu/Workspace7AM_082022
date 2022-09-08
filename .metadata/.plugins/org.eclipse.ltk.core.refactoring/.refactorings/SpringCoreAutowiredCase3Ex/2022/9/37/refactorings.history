@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;m1&apos; in &apos;com.app.MyAppConfig.m2()&apos; to &apos;m2&apos;&#x0D;&#x0A;- Original project: &apos;SpringCoreAutowiredCase3Ex&apos;&#x0D;&#x0A;- Original element: &apos;com.app.MyAppConfig.m2().m1&apos;&#x0D;&#x0A;- Renamed element: &apos;m1&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;m1&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.app{MyAppConfig.java[MyAppConfig~m2@m1!454!490!467!468!QMyRepository;!0!false" name="m2" references="true" stamp="1662428721454" version="1.0"/>
+</session>

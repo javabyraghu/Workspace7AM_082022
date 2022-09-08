@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <system systemId="http://maven.apache.org/maven-v4_0_0.xsd" uri="jar:file:/D:/sts-4.15.3.RELEASE/plugins/org.eclipse.m2e.model.edit_1.18.2.20211002-1029.jar!/xsd/maven-v4_0_0.xsd"/>
+  <system systemId="http://maven.apache.org/xsd/maven-4.0.0.xsd" uri="jar:file:/D:/sts-4.15.3.RELEASE/plugins/org.eclipse.m2e.model.edit_1.18.2.20211002-1029.jar!/xsd/maven-v4_0_0.xsd"/>
+  <system systemId="http://maven.apache.org/xsd/settings-1.0.0.xsd" uri="jar:file:/D:/sts-4.15.3.RELEASE/plugins/org.eclipse.m2e.model.edit_1.18.2.20211002-1029.jar!/xsd/settings-v1_0_0.xsd"/>
+  <system systemId="http://maven.apache.org/xsd/profiles-1.0.0.xsd" uri="jar:file:/D:/sts-4.15.3.RELEASE/plugins/org.eclipse.m2e.model.edit_1.18.2.20211002-1029.jar!/xsd/profiles-v1_0_0.xsd"/>
+  <system systemId="http://maven.apache.org/xsd/archetype-1.0.0.xsd" uri="jar:file:/D:/sts-4.15.3.RELEASE/plugins/org.eclipse.m2e.model.edit_1.18.2.20211002-1029.jar!/xsd/archetype-1.0.0.xsd"/>
+  <system systemId="http://maven.apache.org/xsd/archetype-catalog-1.0.0.xsd" uri="jar:file:/D:/sts-4.15.3.RELEASE/plugins/org.eclipse.m2e.model.edit_1.18.2.20211002-1029.jar!/xsd/archetype-catalog-1.0.0.xsd"/>
+  <system systemId="http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd" uri="jar:file:/D:/sts-4.15.3.RELEASE/plugins/org.eclipse.m2e.model.edit_1.18.2.20211002-1029.jar!/xsd/archetype-descriptor-1.0.0.xsd"/>
+  <system systemId="http://www.w3.org/2001/xml.xsd" uri="jar:file:/D:/sts-4.15.3.RELEASE/plugins/org.eclipse.xsd_2.18.0.v20220312-1031.jar!/cache/www.w3.org/2001/xml.xsd"/>
+  <uri name="http://www.w3.org/2001/XMLSchema" uri="jar:file:/D:/sts-4.15.3.RELEASE/plugins/org.eclipse.xsd_2.18.0.v20220312-1031.jar!/cache/www.w3.org/2001/XMLSchema.xsd"/>
+  <public publicId="-//LOG4J//DTD LOG4J//EN" uri="jar:file:/D:/sts-4.15.3.RELEASE/plugins/org.springsource.ide.eclipse.commons.ui_4.15.3.202208110704.jar!/dtd/log4j-1.2.dtd" webURL="https://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd"/>
+</catalog>

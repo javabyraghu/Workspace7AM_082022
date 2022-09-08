@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="D:\Workspace7AM_082022\SpringAppXmlEx"/>
+			<item value="D:\Workspace7AM_082022\SpringCoreAutowiredBasicEx"/>
+			<item value="D:\Workspace7AM_082022\SpringCorePropertiesFileEx"/>
+			<item value="D:\Workspace7AM_082022\SpringAnnotationConfig"/>
+			<item value="D:\Workspace7AM_082022\SpringCoreXmlRefTypeEx"/>
+			<item value="D:\Workspace7AM_082022\SpringFirstApp"/>
+			<item value="D:\Workspace7AM_082022\demo"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+		</list>
+		<list key="groupId">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+			<item value="com.app"/>
+			<item value="my.app"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="SpringCoreAutowiredCase3Ex"/>
+			<item value="SpringCoreJavaConfigEx"/>
+			<item value="SpringCoreLifeCycleInterfacesEx"/>
+			<item value="SpringCoreXmlLifeCycleMethodsEx"/>
+			<item value="SpringCoreAutowiredNextLevelEx"/>
+			<item value="SpringCoreAutowiredBasicEx"/>
+			<item value="SpringCorePropertiesFileEx"/>
+			<item value="SpringCoreAnnoBasePackEx"/>
+			<item value="SpringAnnotationConfig"/>
+			<item value="SpringCoreXmlRefTypeEx"/>
+			<item value="SpringAppXmlEx"/>
+			<item value="SpringFirstApp"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="1.0"/>
+		</list>
+	</section>
+</section>

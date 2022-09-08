@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;vr&apos; in &apos;my.app.Test.main(...)&apos; to &apos;s&apos;&#x0D;&#x0A;- Original project: &apos;SpringCoreXmlRefTypeEx&apos;&#x0D;&#x0A;- Original element: &apos;my.app.Test.main(String[]).vr&apos;&#x0D;&#x0A;- Renamed element: &apos;vr&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;vr&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;my.app{Test.java[Test~main~\[QString;@vr!328!369!336!337!QService;!0!false" name="s" references="true" stamp="1661826330799" version="1.0"/>
+</session>

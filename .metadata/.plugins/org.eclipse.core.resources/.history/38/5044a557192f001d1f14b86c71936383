@@ -1,0 +1,16 @@
+package com.app.raghu;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+//@ComponentScan("com.app.raghu")
+@Configuration
+public class AppConfig {
+
+	//1. Bean = 1 Method
+	@Bean
+	public Token t1() {
+		return null;
+	}
+	
+}

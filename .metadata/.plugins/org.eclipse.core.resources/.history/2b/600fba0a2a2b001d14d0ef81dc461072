@@ -1,0 +1,8 @@
+package com.app.controller;
+
+import com.app.service.MyService;
+
+public class MyController {
+
+	private MyService service;
+}

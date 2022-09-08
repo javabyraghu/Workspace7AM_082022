@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="rob" class="my.app.Repository">
+    	<property name="entity">
+    		<value>A</value>
+    	</property>
+    </bean>
+    <bean id="sob" class="my.app.Service">
+    	<property name="repo">
+    		<ref bean="rob"/> <!-- It Creates Link b/w objects -->
+    	</property>
+    </bean>
+
+</beans>

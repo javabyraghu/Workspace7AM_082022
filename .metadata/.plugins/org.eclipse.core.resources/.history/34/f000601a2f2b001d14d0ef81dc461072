@@ -1,0 +1,44 @@
+package com.app.service;
+
+public class ExcelExportService {
+
+	private String fileName;
+	private String mode;
+	
+	public void setup() {
+		//lot of code...
+		System.out.println("from init method");
+	}
+	
+	public void clean() {
+		//some code..
+		System.out.println("from destory method");
+	}
+
+	public ExcelExportService() {
+		super();
+	}
+
+	public String getFileName() {
+		return fileName;
+	}
+
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
+
+	public String getMode() {
+		return mode;
+	}
+
+	public void setMode(String mode) {
+		this.mode = mode;
+	}
+
+	@Override
+	public String toString() {
+		return "ExcelExportService [fileName=" + fileName + ", mode=" + mode + "]";
+	}
+	
+	
+}

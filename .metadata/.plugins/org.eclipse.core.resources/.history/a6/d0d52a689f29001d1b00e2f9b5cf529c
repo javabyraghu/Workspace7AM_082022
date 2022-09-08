@@ -1,0 +1,8 @@
+package com.app.test;
+
+import org.springframework.stereotype.Component;
+
+@Component("cob")
+public class MyCacheData {
+
+}
