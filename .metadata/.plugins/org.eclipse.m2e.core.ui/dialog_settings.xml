@@ -6,6 +6,8 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\Workspace7AM_082022\13SpringBeanScopeXmlEx"/>
+			<item value="D:\Workspace7AM_082022\12SpringCoreAutowiredCase3Ex"/>
 			<item value="D:\Workspace7AM_082022\SpringAppXmlEx"/>
 			<item value="D:\Workspace7AM_082022\SpringCoreAutowiredBasicEx"/>
 			<item value="D:\Workspace7AM_082022\SpringCorePropertiesFileEx"/>
@@ -54,12 +56,17 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="com.app.raghu"/>
 			<item value="com.app"/>
 			<item value="my.app"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="15SpringCoreLMIEx"/>
+			<item value="SpringCoreLMIEx"/>
+			<item value="14SpringBeanScopeAnnoJavaEx"/>
+			<item value="13SpringBeanScopeXmlEx"/>
 			<item value="SpringCoreAutowiredCase3Ex"/>
 			<item value="SpringCoreJavaConfigEx"/>
 			<item value="SpringCoreLifeCycleInterfacesEx"/>
@@ -71,7 +78,6 @@
 			<item value="SpringAnnotationConfig"/>
 			<item value="SpringCoreXmlRefTypeEx"/>
 			<item value="SpringAppXmlEx"/>
-			<item value="SpringFirstApp"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -83,6 +89,19 @@
 		</list>
 		<list key="version">
 			<item value="1.0"/>
+		</list>
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="D:\Workspace7AM_082022"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
 		</list>
 	</section>
 </section>

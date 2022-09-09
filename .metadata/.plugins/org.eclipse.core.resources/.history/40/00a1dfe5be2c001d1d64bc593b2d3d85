@@ -1,7 +1,0 @@
-package com.app;
-
-public class DriverManager {
-
-	private String driverClass;
-	private String url;
-}

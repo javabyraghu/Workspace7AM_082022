@@ -1,7 +1,0 @@
-package com.app.service;
-
-public class ExcelExportService {
-
-	private String fileName;
-	private String mode;
-}

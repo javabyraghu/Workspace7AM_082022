@@ -1,6 +1,0 @@
-#This is sample properties file
-my.db.driver=OracleDriver
-my.db-url=jdbc:oracle:thin:sample
-my.db_user=abcd
-my.db-pwd=raghu
-a.b.c_d-e=1234
