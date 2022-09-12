@@ -1596,3 +1596,15 @@ org.eclipse.core.runtime.CoreException: Launch configuration Test (12) reference
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 !SUBENTRY 1 org.eclipse.jdt.launching 4 124 2022-09-12 07:47:00.592
 !MESSAGE Launch configuration Test (12) references closed project 16SpringCoreAutowiredInterfaceRef
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-09-12 07:47:47.414
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-09-12 07:47:47.419
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-09-12 07:47:48.539
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-09-12 07:47:48.541
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
