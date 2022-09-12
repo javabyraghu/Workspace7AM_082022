@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="e1" class="com.app.raghu.Employee">
+    	<property name="name" value="RAJU"/>
+    	<property name="pob">
+    		<ref bean="p1"/>
+    	</property>
+    </bean>
+
+	<bean id="p1" class="com.app.raghu.Project">
+		<property name="pcode" value="HTED"/>
+		<property name="eob">
+			<ref bean="e1"/>
+		</property>
+	</bean>
+</beans>

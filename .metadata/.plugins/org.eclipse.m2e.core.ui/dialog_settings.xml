@@ -6,6 +6,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\Workspace7AM_082022\16SpringCoreAutowiredInterfaceRef"/>
 			<item value="D:\Workspace7AM_082022\13SpringBeanScopeXmlEx"/>
 			<item value="D:\Workspace7AM_082022\12SpringCoreAutowiredCase3Ex"/>
 			<item value="D:\Workspace7AM_082022\SpringAppXmlEx"/>
@@ -63,6 +64,8 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="18SpringCoreCirDep"/>
+			<item value="SpringCoreSpELEx"/>
 			<item value="16SpringCoreAutowiredInterfaceRef"/>
 			<item value="15SpringCoreLMIEx"/>
 			<item value="SpringCoreLMIEx"/>
@@ -76,8 +79,6 @@
 			<item value="SpringCoreAutowiredBasicEx"/>
 			<item value="SpringCorePropertiesFileEx"/>
 			<item value="SpringCoreAnnoBasePackEx"/>
-			<item value="SpringAnnotationConfig"/>
-			<item value="SpringCoreXmlRefTypeEx"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
