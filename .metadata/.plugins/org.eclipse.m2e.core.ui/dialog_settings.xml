@@ -64,6 +64,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="19SpringCoreSchedulingEx"/>
 			<item value="18SpringCoreCirDep"/>
 			<item value="SpringCoreSpELEx"/>
 			<item value="16SpringCoreAutowiredInterfaceRef"/>
@@ -78,7 +79,6 @@
 			<item value="SpringCoreAutowiredNextLevelEx"/>
 			<item value="SpringCoreAutowiredBasicEx"/>
 			<item value="SpringCorePropertiesFileEx"/>
-			<item value="SpringCoreAnnoBasePackEx"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

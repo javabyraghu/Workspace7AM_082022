@@ -1,0 +1,14 @@
+my:
+  app:
+    active: true
+    code: MODEL
+    data:
+    - A
+    - B
+    - C
+    id: 20
+    info:
+      C1: M1
+      C2: M2
+    pob:
+      pcode: AAA

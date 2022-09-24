@@ -1,6 +1,0 @@
-package com.app.raghu;
-
-@Component
-public class Token {
-
-}
