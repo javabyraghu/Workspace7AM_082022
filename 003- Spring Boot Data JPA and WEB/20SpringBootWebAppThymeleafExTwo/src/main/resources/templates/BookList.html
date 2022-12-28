@@ -1,0 +1,30 @@
+<html xmlns:th="https://www.thymeleaf.org/">
+ <head>
+ 	<title> WELCOME </title>
+ 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+ </head>
+ <body>
+  <div class="container">
+ 	<h3 class="bg-info text-white text-center"> BOOKS DETAILS </h3>
+ 	<table class="table table-hover">
+ 		<tr class="bg-primary text-white">
+ 			<th>ID</th>
+ 			<th>NAME</th>
+ 			<th>AUTHOR</th>
+ 			<th>COST</th>
+ 			<th>OPERATIONS</th>
+ 		</tr>
+ 		<tr th:each="ob:${list}">
+ 			<td th:text="${ob.bookId}"></td>
+ 			<td th:text="${ob.bookName}"></td>
+ 			<td>[[${ob.bookAuth}]]</td>
+ 			<td>[[${ob.bookCost}]]</td>
+ 			<td>
+ 				<button class="btn btn-danger">DELETE</button> | 
+ 				<button class="btn btn-info">EDIT</button> 
+ 			</td>
+ 		</tr>
+ 	</table>
+ 	</div>
+ </body>
+</html>

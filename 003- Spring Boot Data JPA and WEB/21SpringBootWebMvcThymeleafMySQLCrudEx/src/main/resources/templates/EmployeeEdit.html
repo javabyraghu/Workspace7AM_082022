@@ -1,0 +1,36 @@
+<html xmlns:th="https://www.thymeleaf.org/">
+
+<head>
+	<title>WELCOME TO EMPLOYEE EDIT PAGE</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+</head>
+
+<body>
+	<div class="container">
+		<div class="card">
+			<div class="card-header bg-primary text-white text-center">
+				<h2>WELCOME TO EMPLOYEE EDIT PAGE </h2>
+			</div>
+			<div class="card-body">
+				<form th:action="@{/employee/update}" method="POST" th:object="${employee}">
+					ID <input type="text" th:field="*{empId}" class="form-control" readonly="true"/>
+					NAME <input type="text" th:field="*{empName}" class="form-control" />
+					GENDER <br/>
+					<input type="radio" th:field="*{empGen}" value="Male"/> Male
+					<input type="radio" th:field="*{empGen}" value="Female"/> Female <br/>
+					SALARY <input type="text" th:field="*{empSal}" class="form-control" />
+					DOJ <input type="date" th:field="*{empDate}" class="form-control" />
+					DEPARTMENT <select th:field="*{empDept}" class="form-control">
+						<option value="">--SELECT--</option>
+						<option th:each="dob:${deptList}" th:value="${dob}" th:text="${dob}"></option>
+					</select>
+					ADDRESS
+					<textarea th:field="*{empAddr}" class="form-control"></textarea>
+					<button type="submit" class="btn btn-success">UPDATE</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<html xmlns:th="https://www.thymeleaf.org/">
+
+<head>
+	<title>WELCOME TO DATA PAGE</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+</head>
+
+<body>
+	<div class="container">
+		<div class="card">
+			<div class="card-header bg-primary text-white text-center">
+				<h2>WELCOME TO EMPLOYEE DATA PAGE </h2>
+			</div>
+			<div class="card-body">
+				<table class="table table-hover">
+					<tr class="bg-info text-white">
+						<th>ID</th>
+						<th>NAME</th>
+						<th>GENDER</th>
+						<th>DOJ</th>
+						<th>SALARY</th>
+						<th>HRA/TA</th>
+						<th>DEPT</th>
+						<th>ADDRESS</th>
+						<th>OPERATIONS</th>
+					</tr>
+					<tr th:each="ob:${list}">
+						<td>[[${ob.empId}]]</td>
+						<td>[[${ob.empName}]]</td>
+						<td>[[${ob.empGen}]]</td>
+						<td>[[${ob.empDate}]]</td>
+						<td>[[${ob.empSal}]]</td>
+						<td>[[${ob.empHra}]] / [[${ob.empTa}]]</td>
+						<td>[[${ob.empDept}]]</td>
+						<td>[[${ob.empAddr}]]</td>
+						<td>
+							<a class="btn btn-danger" th:href="@{/employee/delete(id=${ob.empId})}">DELETE </a>
+							<a class="btn btn-warning" th:href="@{/employee/edit(id=${ob.empId})}"> EDIT</a>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!--card body end-->
+			<div th:if="${message}" class="card-footer bg-success text-white text-center">
+				<b> [[${message}]] </b>
+			</div>
+			<!--card footer end-->
+		</div>
+		<!--card end-->
+		<nav aria-label="Page navigation example">
+			<ul class="pagination justify-content-center">
+				<li class="page-item"><a class="page-link" th:if="${!page.isFirst()}"
+						th:href="@{/employee/all(page=0)}">First</a></li>
+				<li class="page-item"><a class="page-link" th:if="${page.hasPrevious()}"
+						th:href="@{/employee/all(page=${page.getNumber()-1})}">Previous</a></li>
+
+				<th:block th:each="i: ${#numbers.sequence(0, page.getTotalPages()- 1)}">
+					<div th:switch="${i}">
+						<div th:case="${page.getNumber()}">
+							<li class="page-item active">
+								<a class="page-link" th:href="@{/employee/all(page=${i})}">[[${i+1}]]</a>
+							</li>
+						</div>
+
+						<div th:case="*">
+							<li class="page-item">
+								<a class="page-link" th:href="@{/employee/all(page=${i})}">[[${i+1}]]</a>
+							</li>
+						</div>
+					</div>
+				</th:block>
+
+				<li class="page-item"><a class="page-link" th:if="${page.hasNext()}"
+						th:href="@{/employee/all(page=${page.getNumber()+1})}">Next</a></li>
+				<li class="page-item"><a class="page-link" th:if="${!page.isLast()}"
+						th:href="@{/employee/all(page=${page.getTotalPages()-1})}">Last</a></li>
+			</ul>
+		</nav>
+	</div>
+</body>
+
+</html>

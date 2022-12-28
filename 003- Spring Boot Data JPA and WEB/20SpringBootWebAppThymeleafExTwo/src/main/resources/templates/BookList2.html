@@ -1,0 +1,22 @@
+<html xmlns:th="https://www.thymeleaf.org/">
+ <head>
+ 	<title> WELCOME </title>
+ </head>
+ <body>
+ 	<h3> BOOKS DETAILS </h3>
+ 	<table>
+ 		<tr>
+ 			<th>ID</th>
+ 			<th>NAME</th>
+ 			<th>AUTHOR</th>
+ 			<th>COST</th>
+ 		</tr>
+ 		<tr th:each="ob:${list}">
+ 			<td th:text="${ob.bookId}"></td>
+ 			<td th:text="${ob.bookName}"></td>
+ 			<td>[[${ob.bookAuth}]]</td>
+ 			<td>[[${ob.bookCost}]]</td>
+ 		</tr>
+ 	</table>
+ </body>
+</html>

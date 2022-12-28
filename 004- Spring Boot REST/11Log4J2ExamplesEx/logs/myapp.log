@@ -1,0 +1,4 @@
+2022-11-19 10:28:52,371 - com.app.raghu.Test [processData] -(WARN) FROM WARN METHOD 
+2022-11-19 10:28:52,376 - com.app.raghu.Test [processData] -(ERROR) FROM ERROR METHOD 
+2022-11-19 10:28:52,376 - com.app.raghu.Test [processData] -(INFO) FROM INFO METHOD 
+2022-11-19 10:28:52,377 - com.app.raghu.Test [processData] -(FATAL) FROM FATAL METHOD 
