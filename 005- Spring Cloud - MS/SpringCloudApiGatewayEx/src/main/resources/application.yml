@@ -1,0 +1,25 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+server:
+  port: 80
+spring:
+  application:
+    name: API-GATEWAY
+  cloud:
+    gateway:
+      routes:
+      - id: cartId
+        uri: lb://CART-SERVICE
+        predicates:
+        - Path=/cart/**
+        filters:
+        - AddRequestHeader=MyToken,BasicTEST
+        - AddResponseHeader=Service-Mode, Active
+      - id: orderId
+        uri: lb://ORDER-SERVICE
+        predicates:
+        - Path=/order/**
+          
+ 

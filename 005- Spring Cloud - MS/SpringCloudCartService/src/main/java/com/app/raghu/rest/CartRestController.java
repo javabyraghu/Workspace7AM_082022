@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,8 +22,11 @@ public class CartRestController {
 	private String title;
 
 	@GetMapping("/info")
-	public ResponseEntity<String> showMessage() {
-		return ResponseEntity.ok("WELCOME TO CART SERVICE =>" + title);
+	public ResponseEntity<String> showMessage(
+			@RequestHeader("MyToken") String token 
+			)
+	{
+		return ResponseEntity.ok("WELCOME TO CART SERVICE =>" + token);
 	}
 	
 	@GetMapping("/find/{id}")
