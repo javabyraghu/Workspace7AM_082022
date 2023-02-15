@@ -1,0 +1,8 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          facebook:
+            client-id: 1651876458565698
+            client-secret: 0b407987f0c3fea6bd82fb155819e2db
