@@ -1,0 +1,331 @@
+npx create-react-app student-rjs-app
+cd student-rjs-app
+npm start
+---------Install Bootstrap -----------
+npm install bootstrap@4 --save
+------------------------------------------
+>> Open the src/index.js file and add the following code:
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+---------- Install AXIOS-----------
+npm add axios
+---------- Install React Router-----------
+npm install react-router-dom
+==============HOC=================================
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
+const withNavigateHook = (Component) => {
+    return (props) => {
+        const navigation = useNavigate();
+
+        return <Component navigation={navigation} {...props} />
+    }
+}
+
+export default withNavigateHook;
+===============SERVICE==============================
+import axios from 'axios';
+
+const baseUrl = 'http://localhost:9690/v1/api/student';
+
+class StudentService {
+
+      getAllStudents() {
+            return axios.get(`${baseUrl}/all`);
+      }
+
+      createStudent(student) {
+            return axios.post(`${baseUrl}/create`, student);
+      }
+
+      deleteStudent(id) {
+            return axios.delete(`${baseUrl}/remove/${id}`, id);
+      }
+
+      getOneStudent(id) {
+            return axios.get(`${baseUrl}/find/${id}`, id);
+      }
+
+      updateStudent(student) {
+            return axios.put(`${baseUrl}/modify`, student);
+      }
+}
+
+export default new StudentService();
+=================LIST COMPONENT============================
+import React, { Component } from "react";
+import StudentService from "../services/StudentService";
+import withNavigateHook from './withNavigateHook';
+
+class StudentListComponent extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      students: [],
+      message: "",
+    };
+  }
+
+  deleteStudent(id) {
+    StudentService.deleteStudent(id).then((response) => {
+      this.setState({
+        students: this.state.students.filter((student) => student.stdId !== id),
+        message: response.data,
+      });
+    });
+  }
+
+  editStudent(id) {
+    this.props.navigation('/edit/'+id);
+  };
+
+  componentDidMount() {
+    StudentService.getAllStudents().then((response) => {
+      this.setState({ students: response.data });
+    });
+  }
+
+  render() {
+    return (
+      <>
+        <h3 className="text-center">STUDENTS DATA PAGE</h3>
+        <table className="table table-hover">
+          <thead>
+            <tr className="bg-info text-white">
+              <th>ID</th>
+              <th>NAME</th>
+              <th>GENDER</th>
+              <th>COURSE</th>
+              <th>ADDRESS</th>
+              <th>OPERATION</th>
+            </tr>
+          </thead>
+          <tbody>
+            {this.state.students.map((student) => (
+              <tr key={student.stdId}>
+                <td>{student.stdId}</td>
+                <td>{student.stdName}</td>
+                <td>{student.stdGen}</td>
+                <td>{student.stdCourse}</td>
+                <td>{student.stdAddr}</td>
+                <td>
+                  <button
+                    className="btn btn-danger"
+                    onClick={() => this.deleteStudent(student.stdId)}
+                  >
+                    DELETE
+                  </button>
+                  &nbsp;
+                  <button
+                    className="btn btn-warning"
+                    onClick={() => this.editStudent(student.stdId)}
+                  >
+                    EDIT
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        {this.state.message && (
+          <div className="text-center">
+            <strong>{this.state.message}</strong>
+          </div>
+        )}
+      </>
+    );
+  }
+}
+
+export default withNavigateHook(StudentListComponent);
+
+===================CREATE COMPONENT==================
+import React, { Component } from "react";
+import StudentService from "../services/StudentService";
+import withNavigateHook from "./withNavigateHook";
+
+class StudentCreateComponent extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      stdName: "",
+      stdGen: "",
+      stdCourse: "",
+      stdAddr: "",
+      message: "",
+    };
+  }
+
+  handleChange(event) {
+    this.setState({ [event.target.name]: event.target.value });
+  }
+
+  saveStudent = (event) => {
+    event.preventDefault();
+    let student = {
+      stdName: this.state.stdName,
+      stdGen: this.state.stdGen,
+      stdCourse: this.state.stdCourse,
+      stdAddr: this.state.stdAddr,
+    };
+    StudentService.createStudent(student).then((response) => {
+      alert(response.data);
+    });
+    this.props.navigation("/all");
+  };
+  render() {
+    return (
+      <div>
+        <h3 className="text-center">STUDENTS REGISTER PAGE</h3>
+        <form>
+          NAME :
+          <input
+            type="text"
+            name="stdName"
+            id="stdName"
+            value={this.state.stdName}
+            className="form-control"
+            onChange={(event) => this.handleChange(event)}
+          />
+          GENDER :
+          <input
+            type="radio"
+            name="stdGen"
+            id="stdGen"
+            value="Male"
+            onChange={(event) => this.handleChange(event)}
+          />
+          Male
+          <input
+            type="radio"
+            name="stdGen"
+            id="stdGen"
+            value="Female"
+            onChange={(event) => this.handleChange(event)}
+          />
+          Female
+          <br />
+          COURSE :
+          <select
+            name="stdCourse"
+            id="stdCourse"
+            onChange={(event) => this.handleChange(event)}
+            className="form-control"
+          >
+            <option value="">SELECT</option>
+            <option value="JAVA">JAVA</option>
+            <option value="DOT NET">DOT NET</option>
+            <option value="SALESFORCE">SALESFORCE</option>
+            <option value="DEVOPS">DEVOPS</option>
+          </select>
+          ADDRESS :
+          <textarea
+            name="stdAddr"
+            id="stdAddr"
+            onChange={(event) => this.handleChange(event)}
+            className="form-control"
+          ></textarea>
+          <br />
+          <button
+            className="btn btn-success"
+            onClick={(event) => this.saveStudent(event)}
+          >
+            CREATE
+          </button>
+        </form>
+        {this.state.message && (
+          <div className="text-center">
+            <strong>{this.state.message}</strong>
+          </div>
+        )}
+      </div>
+    );
+  }
+}
+
+export default withNavigateHook(StudentCreateComponent);
+
+=========NAVBAR COMPONENT========================
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import StudentListComponent from "./StudentListComponent";
+import StudentCreateComponent from "./StudentCreateComponent";
+function NavBarComponent() {
+  return (
+    <Router>
+      <nav className="navbar navbar-expand-lg navbar-light bg-primary">
+        <a className="navbar-brand text-white" href="#">
+          R-APP
+        </a>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav mr-auto">
+            <li className="nav-item ">
+              <Link to="/all" className="nav-link text-white">
+                VIEW ALL
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/add" className="nav-link text-white">
+                REGISRTER
+              </Link>
+            </li>
+            <li className="nav-item dropdown">
+              <a
+                className="nav-link dropdown-toggle text-white"
+                href="#"
+                role="button"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              >
+                OPERATIONS
+              </a>
+              <div className="dropdown-menu">
+                <Link to="/all" className="nav-link">
+                  VIEW ALL
+                </Link>
+                <Link to="/add" className="nav-link">
+                  REGISRTER
+                </Link>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <Routes>
+        <Route path="/all" element={<StudentListComponent />}></Route>
+        <Route path="/add" element={ <StudentCreateComponent/>}></Route>
+        <Route path="/" element={<StudentListComponent />}></Route>
+        <Route path="*" element={<StudentListComponent />}></Route>
+      </Routes>
+    </Router>
+  );
+}
+
+export default NavBarComponent;
+
+===============APP JS=======================
+import "./App.css";
+import NavBarComponent from "./components/NavBarComponent";
+
+function App() {
+  return (
+    <div className="container">
+      <NavBarComponent />
+    </div>
+  );
+}
+
+export default App;
