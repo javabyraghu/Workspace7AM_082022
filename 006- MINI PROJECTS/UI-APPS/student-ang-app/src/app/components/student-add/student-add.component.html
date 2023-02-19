@@ -1,0 +1,53 @@
+<h3 class="text-center">STUDENTS REGISTER PAGE</h3>
+<form (ngSubmit)="createStudent()">
+  NAME :
+  <input
+    type="text"
+    name="stdName"
+    id="stdName"
+    [(ngModel)]="student.stdName"
+    class="form-control"
+  />
+  GENDER :
+  <input
+    type="radio"
+    name="stdGen"
+    id="stdGen"
+    [(ngModel)]="student.stdGen"
+    value="Male"
+  />
+  Male
+  <input
+    type="radio"
+    name="stdGen"
+    id="stdGen"
+    [(ngModel)]="student.stdGen"
+    value="Female"
+  />
+  Female
+  <br />
+  COURSE :
+  <select
+    name="stdCourse"
+    id="stdCourse"
+    [(ngModel)]="student.stdCourse"
+    class="form-control"
+  >
+    <option value="JAVA">JAVA</option>
+    <option value="DOT NET">DOT NET</option>
+    <option value="DEVOPS">DEVOPS</option>
+    <option value="SALESFORCE">SALESFORCE</option>
+  </select>
+  ADDRESS:
+  <textarea
+    name="stdAddr"
+    id="stdAddr"
+    [(ngModel)]="student.stdAddr"
+    class="form-control"
+  ></textarea>
+  <br />
+  <button type="submit" class="btn btn-success">ADD STUDENT</button>
+</form>
+<div class="text-center">
+  <strong>{{ message }}</strong>
+</div>

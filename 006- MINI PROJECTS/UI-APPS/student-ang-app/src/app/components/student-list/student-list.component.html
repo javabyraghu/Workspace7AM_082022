@@ -1,0 +1,38 @@
+<h3 class="text-center">STUDENTS LIST PAGE</h3>
+<table class="table table-hover">
+  <tr class="bg-info text-white">
+    <th>ID</th>
+    <th>NAME</th>
+    <th>GENDER</th>
+    <th>COURSE</th>
+    <th>ADDRESS</th>
+    <th>OPERATIONS</th>
+  </tr>
+  <tr *ngFor="let sob of students">
+    <td>{{ sob.stdId }}</td>
+    <td>{{ sob.stdName }}</td>
+    <td>{{ sob.stdGen }}</td>
+    <td>{{ sob.stdCourse }}</td>
+    <td>{{ sob.stdAddr }}</td>
+    <td>
+      <button
+        type="button"
+        class="btn btn-danger"
+        (click)="deleteStudent(sob.stdId)"
+      >
+        DELETE
+      </button>
+      &nbsp;&nbsp;
+      <button
+        type="button"
+        class="btn btn-warning"
+        (click)="editStudent(sob.stdId)"
+      >
+        EDIT
+      </button>
+    </td>
+  </tr>
+</table>
+<div class="text-center">
+  <strong>{{ message }}</strong>
+</div>
