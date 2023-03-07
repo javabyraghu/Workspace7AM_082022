@@ -1,0 +1,10 @@
+26/Feb/23--211748 -- com.app.raghu.Test processData (WARN)16~FROM WARN METHOD 
+26/Feb/23--211754 -- com.app.raghu.Test processData (DEBUG)17~FROM DEBUG METHOD 
+26/Feb/23--211754 -- com.app.raghu.Test processData (ERROR)18~FROM ERROR METHOD 
+26/Feb/23--211754 -- com.app.raghu.Test processData (INFO)19~FROM INFO METHOD 
+26/Feb/23--211754 -- com.app.raghu.Test processData (FATAL)20~FROM FATAL METHOD 
+26/Feb/23--211913 -- com.app.raghu.Test processData (WARN)16~FROM WARN METHOD 
+26/Feb/23--211913 -- com.app.raghu.Test processData (DEBUG)17~FROM DEBUG METHOD 
+26/Feb/23--211913 -- com.app.raghu.Test processData (ERROR)18~FROM ERROR METHOD 
+26/Feb/23--211913 -- com.app.raghu.Test processData (INFO)19~FROM INFO METHOD 
+26/Feb/23--211913 -- com.app.raghu.Test processData (FATAL)20~FROM FATAL METHOD 

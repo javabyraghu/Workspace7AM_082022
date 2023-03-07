@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+	<Appenders>
+		<Console name="LogToConsole" target="SYSTEM_OUT">
+			<PatternLayout>
+				<Pattern>%d{ddMMMyy HHmmss} -- %C %M (%t) - [%p] : %L: %m %n </Pattern>
+			</PatternLayout>
+		</Console>
+		<File name="LogToFile" fileName="logs/myapp.log">
+			<PatternLayout>
+				<Pattern>%d{dd/MMM/yy--HHmmss} -- %C %M (%p)%L~%m %n</Pattern>
+			</PatternLayout>
+		</File>
+
+		<RollingFile name="LogToRollingFile" fileName="logs/app-info.html" filePattern="logs/app-info-%d{yyyy-MM-dd}.html.gz">
+			<!--<XMLLayout />-->
+			<HTMLLayout charset="UTF-8" title="HTML LOGS" locationInfo="true" />
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true" />
+				<SizeBasedTriggeringPolicy size="1 KB" />
+			</Policies>
+		</RollingFile>
+
+		<JDBC name="LogToDb" tableName="EVENT_LOGS">
+			<ConnectionFactory class="com.app.raghu.LogsStoreConnectionFactory" method="getConnection" />
+			<Column name="ID" pattern="%u" />
+			<Column name="DATE_TIME" isEventTimestamp="true" />
+			<Column name="CLASS" pattern="%logger" />
+			<Column name="LEVEL" pattern="%level" />
+			<Column name="MESSAGE" pattern="%message" />
+		</JDBC>
+		<!--<SMTP name="LogToMail" subject="Error Log From Log4j" from="javabyraghu@gmail.com" to="javabyraghu@gmail.com" smtpHost="smtp.mailgun.org" smtpPort="587" smtpUsername="postmaster@sandbox79ddd5dc958545dbaae485b2ae467b96.mailgun.org" smtpPassword="e197b1c631f3ac37aab4207b0111f86b-2de3d545-3c77c8bf" bufferSize="100"></SMTP>-->
+	</Appenders>
+	<Loggers>
+		<Logger level="debug" name="com.app.raghu" additivity="false">
+			<AppenderRef ref="LogToRollingFile" />
+			<AppenderRef ref="LogToConsole" />
+			<AppenderRef ref="LogToFile" />
+			<AppenderRef ref="LogToDb" />
+			<!--<AppenderRef ref="LogToMail" />-->
+		</Logger>
+		<Root level="trace">
+			<AppenderRef ref="LogToConsole" />
+		</Root>
+	</Loggers>
+</Configuration>

@@ -1,0 +1,4 @@
+
+06:Mar:23 07:17:55 - com.app.Test [main] : ERROR - FROM ERROR
+06:Mar:23 07:17:55 - com.app.Test [main] : WARN - FROM WARN
+06:Mar:23 07:17:55 - com.app.Test [main] : FATAL - FROM FATAL

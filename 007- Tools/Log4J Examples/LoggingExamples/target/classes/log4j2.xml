@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+	<Appenders>
+		<Console name="LogToConsole" target="SYSTEM_OUT">
+			<PatternLayout>
+				<Pattern>%d - %C [%M] : %p - %m%n </Pattern>
+			</PatternLayout>
+		</Console>
+		<!--<File name="LogToFile" fileName="logs/test.log">
+			<PatternLayout>
+				<Pattern>%d{dd:MMM:yy hh:mm:ss} - %C [%M] : %p - %m%n </Pattern>
+			</PatternLayout>
+		</File>-->
+		<RollingFile name="LogToRollingFile" fileName="logs/app-info.html" filePattern="logs/app-info-%d{yyyy-MM-dd}.html.gz">
+			<!--<XMLLayout />-->
+			<HTMLLayout charset="UTF-8" title="HTML LOGS" locationInfo="true" />
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true" />
+				<SizeBasedTriggeringPolicy size="1 KB" />
+			</Policies>
+		</RollingFile>
+
+
+		<JDBC name="LogToDb" tableName="EVENT_LOGS">
+			<ConnectionFactory class="com.app.raghu.LogsStoreConnectionFactory" method="getConnection" />
+			<Column name="ID" pattern="%u" />
+			<Column name="DATE_TIME" isEventTimestamp="true" />
+			<Column name="CLASS" pattern="%logger" />
+			<Column name="LEVEL" pattern="%level" />
+			<Column name="MESSAGE" pattern="%message" />
+		</JDBC>
+
+	</Appenders>
+	<Loggers>
+		<Root level="warn">
+			<AppenderRef ref="LogToConsole"/>
+			<AppenderRef ref="LogToRollingFile"/>
+			<AppenderRef ref="LogToDb"/>
+		</Root>
+	</Loggers>
+</Configuration>
