@@ -1,0 +1,18 @@
+plugins {
+    id 'java'
+}
+
+sourceCompatibility = 11
+targetCompatibility = 11
+
+repositories {
+    //jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    //spring context
+    implementation group: 'org.springframework', name: 'spring-context', version: '5.3.6'
+    // project lombok
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.20'
+}

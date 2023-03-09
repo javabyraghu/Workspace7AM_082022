@@ -1,0 +1,14 @@
+plugins {
+	id 'java'
+}
+
+sourceCompatibility = 11
+targetCompatibility = 11
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'com.mysql:mysql-connector-j:8.0.32'
+}
